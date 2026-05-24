@@ -24,7 +24,7 @@ services:
     plan: free
     schedule: "0 0 * * *" # Runs every day at midnight
     # Replaces the URL with your live Render URL once deployed
-    command: curl -X GET "https://tech-trove.onrender.com/api/scrape?secret=$CRON_SECRET"
+    startCommand: curl -X GET "https://tech-trove.onrender.com/api/scrape?secret=$CRON_SECRET"
     envVars:
       - key: CRON_SECRET
         sync: false
