@@ -1,9 +1,9 @@
 import { createClient } from '@/utils/supabase/client';
-const supabase = createClient();
 import { dummyProducts, dummyCategories } from './dummyData';
 
 export async function fetchCategories() {
   try {
+    const supabase = createClient();
     const { data, error } = await supabase.from('categories').select('*');
     
     if (error) {
@@ -25,6 +25,7 @@ export async function fetchCategories() {
 
 export async function fetchProducts(categorySlug?: string) {
   try {
+    const supabase = createClient();
     let query = supabase.from('products').select(`
       *,
       categories!inner(name, slug)
