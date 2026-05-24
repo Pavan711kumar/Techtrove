@@ -3,7 +3,7 @@ services:
   - type: web
     name: tech-trove
     env: node
-    plan: starter # Change to 'free' if you are using the free tier
+    plan: free
     buildCommand: npm install && npm run build
     startCommand: npm start
     autoDeploy: true
@@ -14,17 +14,5 @@ services:
         sync: false
       - key: NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
         sync: false
-      - key: CRON_SECRET
-        sync: false
-
-  # Optional: Render Native Cron Job to trigger the scraper API automatically
-  - type: cron
-    name: tech-trove-daily-scraper
-    env: node
-    plan: free
-    schedule: "0 0 * * *" # Runs every day at midnight
-    # Replaces the URL with your live Render URL once deployed
-    startCommand: curl -X GET "https://tech-trove.onrender.com/api/scrape?secret=$CRON_SECRET"
-    envVars:
       - key: CRON_SECRET
         sync: false
