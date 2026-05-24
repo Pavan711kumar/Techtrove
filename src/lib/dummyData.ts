@@ -1,0 +1,53 @@
+export const dummyProducts = [
+  {
+    id: "1",
+    name: "Apple iPhone 15 Pro Max",
+    slug: "apple-iphone-15-pro-max",
+    brand: "Apple",
+    price: 1199.0,
+    image: "https://images.unsplash.com/photo-1695048133142-1a20484d2569?q=80&w=600&auto=format&fit=crop",
+    rating: 4.8,
+    buyUrl: "https://amazon.com/dp/B0CHX6X33L?tag=techtrove-20",
+    category: "Smartphones",
+  },
+  {
+    id: "2",
+    name: "Samsung Galaxy S24 Ultra",
+    slug: "samsung-galaxy-s24-ultra",
+    brand: "Samsung",
+    price: 1299.99,
+    image: "https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?q=80&w=600&auto=format&fit=crop",
+    rating: 4.7,
+    buyUrl: "https://amazon.com/dp/B0CQ2WJY61?tag=techtrove-20",
+    category: "Smartphones",
+  },
+  {
+    id: "3",
+    name: "MacBook Pro M3 Max 16-inch",
+    slug: "macbook-pro-m3-max-16",
+    brand: "Apple",
+    price: 3499.0,
+    image: "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=600&auto=format&fit=crop",
+    rating: 4.9,
+    buyUrl: "https://amazon.com/dp/B0CM5B98H7?tag=techtrove-20",
+    category: "Laptops",
+  },
+  {
+    id: "4",
+    name: "Sony WH-1000XM5 Headphones",
+    slug: "sony-wh-1000xm5",
+    brand: "Sony",
+    price: 398.0,
+    image: "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?q=80&w=600&auto=format&fit=crop",
+    rating: 4.6,
+    buyUrl: "https://amazon.com/dp/B09XS7JWHH?tag=techtrove-20",
+    category: "Accessories",
+  },
+];
+
+export const dummyCategories = [
+  { name: "Smartphones", slug: "smartphones", icon: "📱", color: "from-blue-500 to-cyan-400" },
+  { name: "Laptops", slug: "laptops", icon: "💻", color: "from-purple-500 to-indigo-400" },
+  { name: "Gaming", slug: "gaming", icon: "🎮", color: "from-pink-500 to-rose-400" },
+  { name: "Smart Home", slug: "smart-home", icon: "🏠", color: "from-emerald-500 to-teal-400" },
+];
